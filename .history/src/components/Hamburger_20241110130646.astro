@@ -1,0 +1,36 @@
+---
+
+---
+
+<div class="hamburger">
+  <span class="line"></span>
+  <span class="line"></span>
+  <span class="line"></span>
+</div>
+<div class="hamburger2"></div>
+
+<style>
+  .hamburger2,
+  .hamburger2::before,
+  .hamburger2::after {
+    width: 30px;
+    background-color: #ff9776;
+    border-radius: 4px;
+    height: 3px;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+  }
+  .hamburger2::before,
+  .hamburger2::after {
+    content: "";
+    position: absolute;
+  }
+
+  .hamburger2::before {
+    margin-top: 7px;
+  }
+  .hamburger2::after {
+    margin-top: 14px;
+  }
+</style>

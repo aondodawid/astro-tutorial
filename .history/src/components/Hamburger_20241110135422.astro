@@ -1,0 +1,47 @@
+---
+
+---
+<button aria-label="open" class="hamburger-btn">
+  <label class="hamburger"></label>
+</button>
+
+<style>
+  .hamburger-btn {
+    width: 40px;
+    height: 30px;
+    display: block;
+    align-content: center;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+  }
+  .hamburger,
+  .hamburger::before,
+  .hamburger::after {
+    padding-right: unset;
+    width: 30px;
+    background-color: #ff9776;
+    border-radius: 4px;
+    height: 3px;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+  }
+  .hamburger {
+    top: -7px;
+  }
+  .hamburger::before,
+  .hamburger::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+
+  .hamburger::before {
+    margin-top: 7px;
+  }
+  .hamburger::after {
+    margin-top: 14px;
+  }
+</style>

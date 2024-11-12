@@ -1,0 +1,35 @@
+---
+
+---
+
+<div class="hamburger">
+  <span class="line"></span>
+  <span class="line"></span>
+  <span class="line"></span>
+</div>
+<div class="hamburger2 hamburger-line-center"></div>
+
+<style>
+  .hamburger2,
+  .hamburger2::before,
+  .hamburger2::after {
+    width: 30px;
+  }
+  .hamburger2 {
+    position: relative;
+  }
+  .hamburger2::before {
+    content: "";
+    background-color: red;
+    margin-top: 7px;
+    height: 2px;
+    position: absolute;
+  }
+  .hamburger2::after {
+    content: "";
+    background-color: red;
+    margin-top: 14px;
+    height: 2px;
+    position: absolute;
+  }
+</style>

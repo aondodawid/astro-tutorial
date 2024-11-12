@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+
+  body {
+    margin-inline: auto;
+    background: red;
+    /* align-items: center; */
+    align-content: center;
+    /* justify-items: center; */
+  }
+
+  div {
+    margin-inline: auto;
+    align-self: center;
+    background-color: blue;
+    width: 50px;
+    max-width: 50px;
+    height: 50px;
+  }
+</style>
+<body>
+  <div>
+    asdasd
+  </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css'/>
+    <style>
+      html {
+        box-sizing: border-box;
+        font-size: 62.5%;
+      }
+      *, *:before, *:after {
+        box-sizing: inherit;
+      }
+      body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+        margin: 0;
+        padding: 0;
+        font-weight: normal;
+      }
+      ol, ul {
+        list-style: none;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      input[type="text"],
+      input[type="submit"],
+      input[type="email"],
+      .input
+      {  
+        -webkit-appearance: none  !important;
+        border-radius: 0px !important;
+        border: none; 
+        border: 1px solid #bbb !important;
+      }
+      .wrapper {
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        display: flex;
+        font-size: 1.2rem;
+      }
+      .img {
+        background: url('https://storage.googleapis.com/s-img/zkgmz7vu3ozznlkq.png') no-repeat center center ; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        min-height: 100%;
+        width: 50%;
+      }
+      .text-content {
+        width: 50%;
+      }
+      @media screen and (max-width: 720px) {
+        .img {
+          display: none;
+        }
+        .wrapper {
+          display: flex;
+          justify-content: center;
+        }
+        .text-content {
+          width: 95%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class='wrapper' id='wrapper'>
+      <div class="img"> </div>
+      <div class="text-content">
+        <input type="email" class="email" id="email" name="sm-form-email" placeholder="e-mail"  required="" pattern="[A-Za-z0-9._+\-']+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}$" >
+        <input type="submit" class="submit-btn"  id="submit-btn" name="sm-form-submit" value="ZAPISZ SIĘ">
+        sm-consent.desc.ZGODA_NEWSLETTER$
+        <input type="hidden" name="sm-consent.id.ZGODA_NEWSLETTER$" value="true" >
+        <input type="checkbox"  name="%sm-consent.name.ZGODA_NEWSLETTER$" required="" > 
+      </div>
+    </div>
+    <script type='text/javascript'>
+      const closeButton = document.getElementById('closeButton');
+
+      closeButton.addEventListener('click', function () {
+        window.parent.postMessage('close_button_sm', '*');
+      });
+
+      function sendHeight() {
+        const wrapper = document.getElementById('wrapper');
+        const obj = {
+          name: 'dynamic_height_sm',
+          value: wrapper.getBoundingClientRect().height,
+        };
+        window.parent.postMessage(obj, '*');
+      }
+
+      sendHeight();
+      window.addEventListener('load', sendHeight);
+      window.addEventListener('resize', sendHeight);
+    </script>
+  </body>
+</html>

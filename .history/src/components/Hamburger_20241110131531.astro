@@ -1,0 +1,45 @@
+---
+
+---
+
+<button class="hamburger-btn">
+  <div class="hamburger"></div>
+</button>
+
+<style>
+  .hamburger-btn {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: ;
+    padding: 0;
+  }
+  .hamburger,
+  .hamburger::before,
+  .hamburger::after {
+    padding-right: unset;
+    /* margin-left: 0; */
+    width: 30px;
+    background-color: #ff9776;
+    border-radius: 4px;
+    height: 3px;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+  }
+  .hamburger::before,
+  .hamburger::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+
+  .hamburger::before {
+    margin-top: 7px;
+  }
+  .hamburger::after {
+    margin-top: 14px;
+  }
+</style>

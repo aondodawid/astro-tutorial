@@ -1,0 +1,31 @@
+---
+
+---
+
+<div class="hamburger2"></div>
+
+<style>
+  .hamburger,
+  .hamburger::before,
+  .hamburger::after {
+    width: 30px;
+    background-color: #ff9776;
+    border-radius: 4px;
+    height: 3px;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+  }
+  .hamburger::before,
+  .hamburger::after {
+    content: "";
+    position: absolute;
+  }
+
+  .hamburger::before {
+    margin-top: 7px;
+  }
+  .hamburger::after {
+    margin-top: 14px;
+  }
+</style>

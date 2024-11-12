@@ -1,0 +1,51 @@
+<style>
+  /* tooltip */
+  .hidden {
+    display: none;
+  }
+  .tooltip {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+    position: absolute;
+    left: 25rem;
+    top: 14.45rem;
+    max-width: 30em;
+    background-color: #fff;
+    padding: .8em .6em;
+    border-radius: .3rem;
+    box-shadow: 0 0.125rem 0.5rem rgb(0 0 0 / 30%), 0 0.0625rem 0.125rem rgb(0 0 0 / 20%);
+    z-index: 99;
+  }
+  
+  .tooltip:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1rem;
+    bottom: 100%;
+    left: 1em;
+    border: .75rem solid transparent;
+    border-top: none;
+    border-bottom-color: #fff;
+    filter: drop-shadow(0 -0.0625rem 0.0625rem rgba(0, 0, 0, .1));
+  }
+  .exclamation-mark {
+    width: 24px;
+    display: inline-block;
+    border-radius: 3px;
+  }
+      
+  .tooltip-txt {
+    vertical-align: super;
+    padding-left: .1rem;
+  }
+</style>
+
+<div class="form">
+  <input type="email" placeholder="e-mail" id="email" required="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" name="sm-form-email" >
+  <span class="tooltip hidden" id="tooltip">
+    <img src="https://storage.googleapis.com/s-img/xi14mgnoaypbh3jv.png" class="exclamation-mark">
+    <span class="tooltip-txt"> Podany adres jest już w naszej bazie.</span>
+  </span>
+  <p class="submit-btn" id="submit-btn">Prześlij</p>  
+</div>

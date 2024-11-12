@@ -1,0 +1,54 @@
+---
+
+---
+
+<!-- <button aria-label="open" class="hamburger-btn"> -->
+
+  <label for="hamburger-open">
+    <div class="hamburger"></div>
+  </label>
+  <input type="checkbox" class="hamburger-checkbox" id="hamburger-open" />
+
+
+<!-- </button> -->
+
+<style>
+  label {
+    cursor: pointer;
+    display: block;
+    width: 30px;
+    height: 21px;
+    border: #ff9776 1px solid;
+  }
+  .hamburger-checkbox {
+    /* visibility: hidden; */
+    /* display: none; */
+  }
+  .hamburger,
+  .hamburger::before,
+  .hamburger::after {
+    user-select: none;
+    width: 30px;
+    background-color: #ff9776;
+    border-radius: 4px;
+    height: 3px;
+    position: relative;
+  }
+  .hamburger::before,
+  .hamburger::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+
+  .hamburger::before {
+    margin-top: 7px;
+  }
+  .hamburger::after {
+    margin-top: 14px;
+  }
+  .hamburger-checkbox:checked ~ .nav-links {
+    display: block;
+  }
+</style>
